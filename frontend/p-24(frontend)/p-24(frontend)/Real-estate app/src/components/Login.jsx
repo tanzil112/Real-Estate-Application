@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, sendPasswordResetEmail } from 'firebase/auth';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import './login.css';
+
 // Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyBIMI5SexFE4eajxOT-DzM1QSXdd2zS-fg",
@@ -28,35 +29,43 @@ function Login() {
   const [user, setUser] = useState(null);
   const [resetEmail, setResetEmail] = useState('');
   const [resetMessage, setResetMessage] = useState('');
+  const [role, setRole] = useState('user');
   const navigate = useNavigate();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (person) => {
-      if (person) {
-        setUser(person);
-      } else {
-        setUser(null);
-      }
+      setUser(person || null);
     });
-
     return () => unsubscribe();
   }, []);
 
+  const handleRoleChange = (e) => {
+    setRole(e.target.value);
+  };
+
   const handleLogin = async (e) => {
     e.preventDefault();
-
     if (!username || !password) {
       setMessage('Please enter both username and password.');
       return;
     }
-
-    const user = { username, password };
+    
+    if (role === 'admin' && (username !== 'adminUser' || password !== 'adminPass')) {
+      setMessage('Invalid admin credentials.');
+      return;
+    }
 
     try {
-      const response = await axios.post('http://localhost:8083/api/auth/login', user);
+      const response = await axios.post('http://localhost:8083/api/auth/login', { username, password });
       setMessage(response.data);
       if (response.data === 'Login successful!') {
-        navigate('/dashboard2');
+        if (role === 'admin') {
+          navigate('/admin-dashboard');
+        } else if (role === 'seller') {
+          navigate('/seller-dashboard');
+        } else {
+          navigate('/user-dashboard');
+        }
       }
     } catch (error) {
       setMessage(error.response ? error.response.data : 'An error occurred, please try again.');
@@ -78,7 +87,6 @@ function Login() {
       setResetMessage('Please enter your email.');
       return;
     }
-
     try {
       await sendPasswordResetEmail(auth, resetEmail);
       setResetMessage('Password reset email sent! Check your inbox.');
@@ -94,78 +102,50 @@ function Login() {
           <source src="/video.mp4" type="video/mp4" />
         </video>
       </div>
-
       <div className="login-container">
         <div className="login-form">
           <h2>Login</h2>
           <form onSubmit={handleLogin}>
             <div className="input-group">
-              <label>User Name:</label>
-              <input
-                type="text"
-                placeholder="Enter your username"
-                className="login-input"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
+              <label>Username:</label>
+              <input type="text" placeholder="Enter your username" className="login-input" value={username} onChange={(e) => setUsername(e.target.value)} required />
             </div>
             <div className="input-group">
               <label>Password:</label>
               <div className="password-container">
-                <input
-                  type={showPassword ? 'text' : 'password'}
-                  placeholder="Enter your password"
-                  className="login-input"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <span
-                  className="toggle-password"
-                  onClick={() => setShowPassword(!showPassword)}
-                >
+                <input type={showPassword ? 'text' : 'password'} placeholder="Enter your password" className="login-input" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                <span className="toggle-password" onClick={() => setShowPassword(!showPassword)}>
                   {showPassword ? '👁️' : '🔒'}
                 </span>
               </div>
             </div>
-            <p>
-              Don't have an account? <Link to="/register" style={{color:'#E0C097'}}>Signup</Link>
-            </p>
+            <div className="input-group">
+              <label>Select Role:</label>
+              <select className="role-dropdown" value={role} onChange={handleRoleChange}>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+                <option value="seller">Seller</option>
+              </select>
+            </div>
             <button type="submit" className="login-button">Login</button>
           </form>
-             <center>
+          <p>Don't have an account? <Link to="/register" style={{color:'#E0C097'}}>Signup</Link></p>
+          <center>
             {user ? (
-              <div>
-                <button onClick={() => signOut(auth)}>Sign Out</button>
-              </div>
+              <button onClick={() => signOut(auth)}>Sign Out</button>
             ) : (
-              <button onClick={signInWithGoogle} >
-                <FontAwesomeIcon icon={faGoogle} style={{ marginRight: "8px" }}  />
-                Sign In With Google
+              <button onClick={signInWithGoogle}>
+                <FontAwesomeIcon icon={faGoogle} style={{ marginRight: "8px" }} /> Sign In With Google
               </button>
             )}
           </center>
           {message && <p>{message}</p>}
-          <p>
-            Forgot password?{' '}
-            <span 
-              style={{ color: 'blue', cursor: 'pointer' , color:'#E0C097' }}
-              onClick={() => setResetMessage('')} // Clear previous reset messages
-            >
-              Reset here
-            </span>
-          </p>
+          <p>Forgot password? <span style={{ color: 'blue', cursor: 'pointer' , color:'#E0C097' }} onClick={() => setResetMessage('')}>Reset here</span></p>
           <div>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="login-input"
-              value={resetEmail}
-              onChange={(e) => setResetEmail(e.target.value)}
-            />
-            <button onClick={handleResetPassword} className="reset-button" >Reset Password</button>
+            <input type="email" placeholder="Enter your email" className="login-input" value={resetEmail} onChange={(e) => setResetEmail(e.target.value)} />
+            <button onClick={handleResetPassword} className="reset-button">Reset Password</button>
           </div>
           {resetMessage && <p>{resetMessage}</p>}
-       
         </div>
       </div>
     </div>
