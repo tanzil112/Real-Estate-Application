@@ -1,0 +1,7 @@
+package com.example.demo.security;
+
+import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
+
+public interface SecurityConfig extends WebSecurityConfigurer<T> {
+
+}
