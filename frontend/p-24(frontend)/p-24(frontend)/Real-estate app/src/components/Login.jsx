@@ -64,7 +64,7 @@ function Login() {
         } else if (role === 'seller') {
           navigate('/seller-dashboard');
         } else {
-          navigate('/user-dashboard');
+          navigate('/userdashboard');
         }
       }
     } catch (error) {
@@ -76,7 +76,7 @@ function Login() {
     try {
       const provider = new GoogleAuthProvider();
       await signInWithPopup(auth, provider);
-      navigate('/dashboard2');
+      navigate('/userdashboard');
     } catch (err) {
       console.log(err);
     }
