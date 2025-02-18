@@ -11,6 +11,14 @@ const locations = [
   { value: "Delhi", label: "Delhi" },
   { value: "Hyderabad", label: "Hyderabad" },
 ];
+const area=[{
+  value: "Madhapur", label: "Madhapur" 
+},{value: "Hitech-City", label: "Hitech-City" },{value: "Kondapur", label: "Kondapur" },{value: "Kukatpally", label: "Kukatpally" },{
+  value: "Kphb", label: "Kphb" 
+}]
+const range=[
+  { value:"500-1000",label:"₹10000 - ₹50000"},{value:"₹50000-₹100000",label:"₹50000-₹100000"},{value:"₹100000+",label:"₹100000+"},
+]
 
 const propertyTypes = [
   { value: "co-working", label: "Co-Working" },
@@ -68,21 +76,7 @@ const LocationSearch = () => {
       <br />
       <div className="search-container">
         <div className="search-filters">
-          <Select
-            options={locations}
-            placeholder="Select a City"
-            value={selectedLocation}
-            onChange={setSelectedLocation}
-            className="location-dropdown"
-          />
-          <Select
-            options={propertyTypes}
-            placeholder="Property Type"
-            value={selectedProperty}
-            onChange={setSelectedProperty}
-            className="property-dropdown"
-          />
-          <div className="radio-buttons">
+        <div className="radio-buttons">
             <label>
               <input
                 type="radio"
@@ -102,6 +96,30 @@ const LocationSearch = () => {
               Buy
             </label>
           </div>
+          <Select
+            options={locations}
+            placeholder="Select a City"
+            value={selectedLocation}
+            onChange={setSelectedLocation}
+            className="location-dropdown"
+          />
+          
+          <Select
+          options={area}
+          placeholder="Area"
+          />
+          <Select
+            options={propertyTypes}
+            placeholder="Property Type"
+            value={selectedProperty}
+            onChange={setSelectedProperty}
+            className="property-dropdown"
+          />
+          <Select
+          options={range}
+          placeholder="Range"
+          />
+         
           <button className="search-btn" onClick={handleSearch}>
             🔍 Search
           </button>

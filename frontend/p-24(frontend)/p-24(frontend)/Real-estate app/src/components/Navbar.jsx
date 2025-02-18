@@ -13,7 +13,7 @@ const Navbar = ({ hideAuthLinks }) => {
         <Link to="/">Services</Link>
         <Link to="/">Payment</Link>
         <Link to="/location-search">Location</Link>
-        <Link to="/">Contact</Link>
+        <Link to="/contact">Contact</Link>
         <Link to="/about">About</Link>
       </div>
       {/* Hide auth buttons if hideAuthLinks is true */}
