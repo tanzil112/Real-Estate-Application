@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=Real-EstateApplication/C:\/Users\/lasya\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/3.4.0\/spring-data-jpa-3.4.0.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/3.4.0=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1732516558778"/>
+    <typeInfo handle="=Real-EstateApplication/C:\/Users\/lasya\/.m2\/repository\/org\/springframework\/security\/spring-security-config\/6.4.1\/spring-security-config-6.4.1.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.security=/=/maven.artifactId=/spring-security-config=/=/maven.version=/6.4.1=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.security.config.annotation.web(WebSecurityConfigurer.class[WebSecurityConfigurer" modifiers="1537" timestamp="1733207822947"/>
+</typeInfoHistroy>
