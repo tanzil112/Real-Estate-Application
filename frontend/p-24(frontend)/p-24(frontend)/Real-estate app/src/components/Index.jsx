@@ -8,7 +8,7 @@ import About from './Aboutus';
 import UserDashboard from './UserDashboard';
 import LocationSearch from './LocationSearch';
 import SearchResults from './SearchResults';
-
+import PropertyDetails from './PropertyDetails';
 
 function Index() {
   return (
@@ -23,6 +23,8 @@ function Index() {
           
          
           <Route path="/userdashboard" element={<UserDashboard />} />
+          <Route path="/property/:id" element={<PropertyDetails />} />
+
 
           {/* Location Search Feature */}
           <Route path="/search" element={<SearchResults />} />
