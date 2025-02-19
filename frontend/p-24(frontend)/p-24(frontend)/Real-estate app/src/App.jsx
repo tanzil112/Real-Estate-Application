@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
   return (
     <>
       <div>
+        {/* <h1 className="text-center text-info">Search Button</h1> */}
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
