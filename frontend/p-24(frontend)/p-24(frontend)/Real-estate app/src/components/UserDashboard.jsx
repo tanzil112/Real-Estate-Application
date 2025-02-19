@@ -5,7 +5,7 @@ const UserDashboard = () => {
   return (
     <>
       {/* Pass hideAuthLinks as true to hide auth buttons */}
-      <Navbar hideAuthLinks={true} />
+      <Navbar hideAuthLinks={true} hideAuthLinks2={true} />
     </>
   );
 };

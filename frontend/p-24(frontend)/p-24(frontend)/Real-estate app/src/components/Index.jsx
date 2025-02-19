@@ -9,6 +9,8 @@ import UserDashboard from './UserDashboard';
 import LocationSearch from './LocationSearch';
 import SearchResults from './SearchResults';
 import Contact from './Contact';
+import Services from './Services';
+import Payment from './Payment';
 
 function Index() {
   return (
@@ -20,9 +22,12 @@ function Index() {
           <Route path="/register" element={<Register />} />
           <Route path="/terms" element={<TandC />} />
           <Route path="/about" element={<About />} />
-          
+          <Route path="/services" element={<Services />} />
+          <Route path="/payment" element={<Payment />} />
+
           <Route path="/contact" element={<Contact />} />
           <Route path="/userdashboard" element={<UserDashboard />} />
+
 
           {/* Location Search Feature */}
           <Route path="/search" element={<SearchResults />} />
