@@ -4,66 +4,85 @@ import { Link } from "react-router-dom";
 
 // Sample property data
 const properties = [
+  // Hyderabad Properties
   { id: 1, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/images/flat1.jpg" },
-  { id: 2, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/images/flat1.jpg" },
-  { id: 3, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/images/flat1.jpg" },
-  { id: 4, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/images/flat1.jpg" },
-  { id: 5, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/images/flat1.jpg" },
-  
-  { id: 6, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹1,00,000+", image: "/images/villa2.jpg" },
-  { id: 7, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹1,00,000+", image: "/images/villa2.jpg" },
-  { id: 8, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹1,00,000+", image: "/images/villa2.jpg" },
-  { id: 9, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹1,00,000+", image: "/images/villa2.jpg" },
-  { id: 10, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹1,00,000+", image: "/images/villa2.jpg" },
-  
-  { id: 11, location: "Hyderabad", area: "Kukatpally", type: "House", range: "₹20,000 - ₹60,000", image: "/images/house1.jpg" },
-  { id: 12, location: "Hyderabad", area: "Kukatpally", type: "House", range: "₹20,000 - ₹60,000", image: "/images/house1.jpg" },
-  { id: 13, location: "Hyderabad", area: "Kukatpally", type: "House", range: "₹20,000 - ₹60,000", image: "/images/house1.jpg" },
-  { id: 14, location: "Hyderabad", area: "Kukatpally", type: "House", range: "₹20,000 - ₹60,000", image: "/images/house1.jpg" },
-  { id: 15, location: "Hyderabad", area: "Kukatpally", type: "House", range: "₹20,000 - ₹60,000", image: "/images/house1.jpg" },
-  
-  { id: 16, location: "Hyderabad", area: "KPHB", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/images/flat3.jpg" },
-  { id: 17, location: "Hyderabad", area: "KPHB", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/images/flat3.jpg" },
-  { id: 18, location: "Hyderabad", area: "KPHB", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/images/flat3.jpg" },
-  { id: 19, location: "Hyderabad", area: "KPHB", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/images/flat3.jpg" },
+  { id: 2, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹1,00,000+", image: "/images/villa2.jpg" },
+  { id: 3, location: "Hyderabad", area: "Kukatpally", type: "House", range: "₹20,000 - ₹60,000", image: "/images/house1.jpg" },
+  { id: 4, location: "Hyderabad", area: "KPHB", type: "Apartment", range: "₹18,000 - ₹25,000", image: "/images/flat3.jpg" },
+  { id: 5, location: "Hyderabad", area: "Kondapur", type: "Villa", range: "₹2,00,000+", image: "/images/villa3.jpg" },
 
-  { id: 20, location: "Hyderabad", area: "KPHB", type: "Apartment", range: "₹18,000 - ₹25,000", image: "/images/flat3.jpg" },
-  { id: 21, location: "Hyderabad", area: "KPHB", type: "House", range: "₹50,000 - ₹1,00,000", image: "/images/flat3.jpg" },
-  { id: 22, location: "Hyderabad", area: "KPHB", type: "House", range: "₹50,000 - ₹1,00,000", image: "/images/flat3.jpg" },
-  { id: 23, location: "Hyderabad", area: "KPHB", type: "House", range: "₹50,000 - ₹1,00,000", image: "/images/flat3.jpg" },
-  
-  { id: 24, location: "Hyderabad", area: "Kondapur", type: "Villa", range: "₹2,00,000+", image: "/images/villa3.jpg" },
-  { id: 25, location: "Hyderabad", area: "Kondapur", type: "Villa", range: "₹2,00,000+", image: "/images/villa3.jpg" },
-  { id: 26, location: "Hyderabad", area: "Kondapur", type: "Villa", range: "₹2,00,000+", image: "/images/villa3.jpg" },
-  { id: 27, location: "Hyderabad", area: "Kondapur", type: "Villa", range: "₹2,00,000+", image: "/images/villa3.jpg" },
-  { id: 28, location: "Hyderabad", area: "Kondapur", type: "Villa", range: "₹2,00,000+", image: "/images/villa3.jpg" }
+  // Delhi Properties
+  { id: 6, location: "Delhi", area: "Dwarka", type: "Apartment", range: "₹20,000 - ₹70,000", image: "/images/flat4.jpg" },
+  { id: 7, location: "Delhi", area: "Saket", type: "House", range: "₹40,000 - ₹1,50,000", image: "/images/house2.jpg" },
+  { id: 8, location: "Delhi", area: "Karol Bagh", type: "Villa", range: "₹2,50,000+", image: "/images/villa4.jpg" },
+  { id: 9, location: "Delhi", area: "Connaught Place", type: "Penthouse", range: "₹3,00,000+", image: "/images/penthouse1.jpg" },
+  { id: 10, location: "Delhi", area: "Vasant Kunj", type: "Apartment", range: "₹50,000 - ₹1,00,000", image: "/images/flat5.jpg" },
+
+  // Bangalore Properties
+  { id: 11, location: "Bangalore", area: "Whitefield", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/images/flat6.jpg" },
+  { id: 11, location: "Bangalore", area: "Whitefield", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/images/flat6.jpg" },
+  { id: 12, location: "Bangalore", area: "Koramangala", type: "House", range: "₹50,000 - ₹1,00,000", image: "/images/house3.jpg" },
+  { id: 13, location: "Bangalore", area: "Electronic City", type: "Villa", range: "₹2,00,000+", image: "/images/villa5.jpg" },
+  { id: 14, location: "Bangalore", area: "Indiranagar", type: "Penthouse", range: "₹3,50,000+", image: "/images/penthouse2.jpg" },
+  { id: 15, location: "Bangalore", area: "MG Road", type: "Studio Apartment", range: "₹30,000 - ₹70,000", image: "/images/studio1.jpg" }
 ];
 
-// Property filter options
+export { properties };
+
+
+
+const locations = [
+  { value: "Bangalore", label: "Bangalore" },
+  { value: "Delhi", label: "Delhi" },
+  { value: "Hyderabad", label: "Hyderabad" },
+];
+
+const cityAreas = {
+  Hyderabad: [
+    { value: "Madhapur", label: "Madhapur" },
+    { value: "Hitech City", label: "Hitech City" },
+    { value: "Kondapur", label: "Kondapur" },
+    { value: "Kukatpally", label: "Kukatpally" },
+    { value: "KPHB", label: "KPHB" },
+  ],
+  Delhi: [
+    { value: "Dwarka", label: "Dwarka" },
+    { value: "Saket", label: "Saket" },
+    { value: "Karol Bagh", label: "Karol Bagh" },
+    { value: "Connaught Place", label: "Connaught Place" },
+    { value: "Vasant Kunj", label: "Vasant Kunj" },
+  ],
+  Bangalore: [
+    { value: "Whitefield", label: "Whitefield" },
+    { value: "Koramangala", label: "Koramangala" },
+    { value: "Electronic City", label: "Electronic City" },
+    { value: "Indiranagar", label: "Indiranagar" },
+    { value: "MG Road", label: "MG Road" },
+  ],
+};
+
+const priceRanges = [
+  { value: "10000-50000", label: "₹10,000 - ₹50,000" },
+  { value: "50000-100000", label: "₹50,000 - ₹100,000" },
+  { value: "100000+", label: "₹100,000+" },
+];
+
 const propertyTypes = [
   { value: "Apartment", label: "Apartment" },
   { value: "House", label: "House" },
-  { value: "Villa", label: "Villa" }
+  { value: "Villa", label: "Villa" },
+  { value: "Penthouse", label: "Penthouse" },
+  { value: "Studio Apartment", label: "Studio Apartment" },
 ];
-
-const priceRanges = [
-  { value: "₹10,000 - ₹50,000", label: "₹10,000 - ₹50,000" },
-  { value: "₹50,000 - ₹1,00,000", label: "₹50,000 - ₹1,00,000" },
-  { value: "₹1,00,000+", label: "₹1,00,000+" }
-];
-
-const areas = [
-  { value: "Madhapur", label: "Madhapur" },
-  { value: "Hitech City", label: "Hitech City" },
-  { value: "Kukatpally", label: "Kukatpally" }
-];
-
-// Exporting properties for PropertyDetails.jsx
-export { properties };
 
 const LocationSearch = () => {
   const [filters, setFilters] = useState({ location: null, area: null, type: null, price: null });
   const [filteredResults, setFilteredResults] = useState([]);
+  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [selectedArea, setSelectedArea] = useState(null);
+  const [selectedProperty, setSelectedProperty] = useState(null);
+  const [selectedRange, setSelectedRange] = useState(null);
+  const [availableAreas, setAvailableAreas] = useState([]);
 
   useEffect(() => {
     const savedResults = localStorage.getItem("filteredProperties");
@@ -72,13 +91,23 @@ const LocationSearch = () => {
     }
   }, []);
 
+  // Update available areas when city is selected
+  useEffect(() => {
+    if (selectedLocation) {
+      setAvailableAreas(cityAreas[selectedLocation.value] || []);
+      setSelectedArea(null); // Reset area selection when city changes
+    } else {
+      setAvailableAreas([]);
+    }
+  }, [selectedLocation]);
+
   const handleSearch = () => {
     const results = properties.filter((property) => {
       return (
-        (!filters.location || property.location === filters.location.value) &&
-        (!filters.area || property.area === filters.area.value) &&
-        (!filters.type || property.type === filters.type.value) &&
-        (!filters.price || property.range === filters.price.value)
+        (!selectedLocation || property.location === selectedLocation.value) &&
+        (!selectedArea || property.area === selectedArea.value) &&
+        (!selectedProperty || property.type === selectedProperty.value) &&
+        (!selectedRange || property.range === selectedRange.label)
       );
     });
 
@@ -91,25 +120,33 @@ const LocationSearch = () => {
       <h2>Find Your Property</h2>
       <div className="search-filters">
         <Select
-          options={[{ value: "Hyderabad", label: "Hyderabad" }]}
+          options={locations}
           placeholder="Select a City"
-          onChange={(value) => setFilters({ ...filters, location: value, area: null })}
+          value={selectedLocation}
+          onChange={setSelectedLocation}
+          className="location-dropdown"
         />
         <Select
-          options={filters.location ? areas : []}
-          placeholder="Select an Area"
-          onChange={(value) => setFilters({ ...filters, area: value })}
-          isDisabled={!filters.location}
+          options={availableAreas}
+          placeholder="Select Area"
+          value={selectedArea}
+          onChange={setSelectedArea}
+          className="area-dropdown"
+          isDisabled={!selectedLocation} // Disable if no city is selected
         />
         <Select
           options={propertyTypes}
           placeholder="Property Type"
-          onChange={(value) => setFilters({ ...filters, type: value })}
+          value={selectedProperty}
+          onChange={setSelectedProperty}
+          className="property-dropdown"
         />
         <Select
           options={priceRanges}
-          placeholder="Price Range"
-          onChange={(value) => setFilters({ ...filters, price: value })}
+          placeholder="Select Price Range"
+          value={selectedRange}
+          onChange={setSelectedRange}
+          className="range-dropdown"
         />
         <button onClick={handleSearch}>Search</button>
       </div>
@@ -136,4 +173,4 @@ const LocationSearch = () => {
   );
 };
 
-export default LocationSearch;
+export default LocationSearch; 

@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { properties } from "./LocationSearch"; // Importing property data
+import { properties } from "./LocationSearch"; // Importing properties
 
 const PropertyDetails = () => {
   const { id } = useParams(); // Get property ID from URL
@@ -28,16 +28,15 @@ const PropertyDetails = () => {
           <button className="contact-button">Contact Owner</button>
         </div>
       </div>
-
       <div className="amenities-section">
         <h2>Amenities</h2>
         <div className="amenities-list">
-          <div className="amenity"><i className="fa-solid fa-dumbbell"></i> Gym</div>
-          <div className="amenity"><i className="fa-solid fa-person-swimming"></i> Swimming Pool</div>
-          <div className="amenity"><i className="fa-solid fa-elevator"></i> Lift</div>
-          <div className="amenity"><i className="fa-solid fa-car"></i> Parking</div>
-          <div className="amenity"><i className="fa-solid fa-shield-halved"></i> Security</div>
-          <div className="amenity"><i className="fa-solid fa-wifi"></i> WiFi</div>
+          <div className="amenity"><div /> <i class="fa-solid fa-dumbbell"></i>Gym</div>
+          <div className="amenity"><div/><i class="fa-solid fa-person-swimming"></i> Swimming Pool</div>
+          <div className="amenity"><div /> <i class="fa-solid fa-elevator"></i>Lift</div>
+          <div className="amenity"><div /> <i class="fa-solid fa-car"></i>Parking</div>
+          <div className="amenity"><div/> <i class="fa-solid fa-shield-halved"></i>Security</div>
+          <div className="amenity"><div /><i class="fa-solid fa-wifi"></i> WiFi</div>
         </div>
       </div>
     </div>
