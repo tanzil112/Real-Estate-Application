@@ -1,9 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Navbar from './Navbar';
 
 function About() {
   return (
     <>
+    <Navbar/>
       <div className='about'>
         <p id='abtpara'>About HomeHive</p>
         <div className="content">
@@ -48,7 +50,7 @@ Join HomeHive today and experience a smarter, faster, and more transparent way t
 
         </div>
 
-        <NavLink to="/" style={{ color: "white" }}>
+        <NavLink to="/userdashboard" style={{ color: "white" }}>
           <i className="fa-solid fa-arrow-left back"></i>Back
         </NavLink>
       </div>

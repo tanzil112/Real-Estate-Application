@@ -7,7 +7,11 @@ import Navbar from "./Navbar";
 const properties = [
   // Hyderabad Properties
   { id: 1, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/apart2.jpg" },
-  { id: 2, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹1,00,000+", image: "/apart3.jpg" },
+  { id: 2, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹100,000+", image: "/apart3.jpg" },
+  { id: 2, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹100,000+", image: "/apart4.jpg" },
+  { id: 2, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹100,000+", image: "/apart5.jpg" },
+  { id: 2, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹100,000+", image: "/apart6.jpg" },
+
   { id: 3, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/apart4.jpg" },
   { id: 4, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/flat4.jpg" },
   { id: 5, location: "Hyderabad", area: "Madhapur", type: "villa",  range: "₹10,000 - ₹50,000", image: "/flat4.jpg" },
@@ -22,6 +26,10 @@ const properties = [
   // Bangalore Properties
   { id: 11, location: "Bangalore", area: "Whitefield", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/flat5.jpg" },
   { id: 12, location: "Bangalore", area: "Whitefield", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/flat6.jpg" },
+  { id: 12, location: "Bangalore", area: "Whitefield", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/flat4.jpg" },
+  { id: 12, location: "Bangalore", area: "Whitefield", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/apart2.jpg" },
+  { id: 12, location: "Bangalore", area: "Whitefield", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/apart3.jpg" },
+
   { id: 13, location: "Bangalore", area: "Koramangala", type: "House", range: "₹50,000 - ₹1,00,000", image: "/apart5.jpg" },
   { id: 14, location: "Bangalore", area: "Electronic City", type: "Villa", range: "₹1,00,000+", image: "/pent4.jpg" },
   { id: 15, location: "Bangalore", area: "Indiranagar", type: "Penthouse", range: "₹1,00,000+", image: "/pent3.jpg" },
@@ -84,6 +92,8 @@ const LocationSearch = () => {
   const [selectedProperty, setSelectedProperty] = useState(null);
   const [selectedRange, setSelectedRange] = useState(null);
   const [availableAreas, setAvailableAreas] = useState([]);
+  const [searchType, setSearchType] = useState("rent");
+
 
   useEffect(() => {
     const savedResults = localStorage.getItem("filteredProperties");
@@ -119,9 +129,32 @@ const LocationSearch = () => {
   return (
     <>
     <Navbar hideAuthLinks={true} hideAuthLinks2={true}/>
+    
     <div className="search-container">
+      
       <h2>Find Your Property</h2>
       <div className="search-filters">
+      <div className="radio-buttons">
+        
+            <label>
+              <input
+                type="radio"
+                value="rent"
+                checked={searchType === "rent"}
+                onChange={() => setSearchType("rent")}
+              />
+              Rent
+            </label>
+            <label>
+              <input
+                type="radio"
+                value="buy"
+                checked={searchType === "buy"}
+                onChange={() => setSearchType("buy")}
+              />
+              Buy
+            </label>
+          </div>
         <Select
           options={locations}
           placeholder="Select a City"

@@ -1,8 +1,10 @@
 import React from 'react';
+import Navbar from './Navbar';
 
 function Contact () {
   return (
     <>
+    <Navbar/>
     <div className="main-contact">
     <div class="contact-container">
     <h1 class="contact-header">Contact Us</h1>
@@ -32,7 +34,7 @@ function Contact () {
     <div class="contact-info">
       <h2>Our Office</h2>
       <p><strong>Address:</strong> 123 Travel Street, Wanderlust City, 45678</p>
-      <p><strong>Email:</strong> <a href="mailto:support@traveler.com">support@traveler.com</a></p>
+      <p><strong>Email:</strong> <a href="mailto:support@traveler.com">support@homehive.com</a></p>
       <p><strong>Phone:</strong> +1 (555) 123-4567</p>
     </div>
   </div>

@@ -10,6 +10,7 @@ import LocationSearch from './LocationSearch';
 import SearchResults from './SearchResults';
 import PropertyDetails from './PropertyDetails';
 import ContOwn from './ContOwn';
+import Contact from './Contact';
 
 function Index() {
   return (
@@ -23,7 +24,8 @@ function Index() {
           <Route path="/about" element={<About />} />
           
           <Route path="/owner" element={<ContOwn />} />
-         
+          <Route path="/contact" element={<Contact />} />
+
           <Route path="/userdashboard" element={<UserDashboard />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
 

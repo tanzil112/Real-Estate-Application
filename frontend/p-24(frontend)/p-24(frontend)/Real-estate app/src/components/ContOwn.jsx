@@ -54,7 +54,7 @@ const ContOwn = () => {
       </div>
 
       {/* Back to Home */}
-      <Link to="/location-search" className="back-home">← Back</Link>
+      <Link to="/location-search" className="back-home" style={{color:"black"}}>← Back</Link>
     </div>
     </>
   );

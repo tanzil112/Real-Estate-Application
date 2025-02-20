@@ -1,5 +1,4 @@
 
-
 .search-filters {
   display: flex;
   gap: 10px;
@@ -120,7 +119,7 @@
   width: 90%;
   margin: 150px auto;
   padding: 20px;
-  background: #f8f8f8;
+  background: none;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -129,10 +128,15 @@
   margin: 30px 0px;
   font-weight: bolder;
 }
+.prop-btn button{
+  width: 15%;
+  background-color: #1C1C1C;
+
+}
 .prop-btn{
   width: 10%;
-}
 
+}
 /* Dropdown selection */
 .search-filters select,
 .search-filters button {
@@ -160,16 +164,7 @@
 }
 
 
-/* Results Container */
-/* .results-container {
-  width: 90%;
-  max-width: 900px;
-  margin: 20px auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-} */
+
 
 /* Property Card */
 .card {
@@ -199,7 +194,7 @@
 }
 
 .card button {
-  background-color: #28a745;
+  background-color: #1C1C1C;
   color: white;
   padding: 10px;
   border: none;
@@ -209,7 +204,7 @@
 }
 
 .card button:hover {
-  background-color: #218838;
+  background-color: #E0C097; /* Gold */
 }
 .property-details {
   max-width: 800px;
@@ -302,7 +297,7 @@ strong {
 
 .contact-button {
   padding: 12px;
-  background-color: #ff6600;
+  background-color: #1C1C1C;
   color: white;
   border: none;
   font-size: 16px;
@@ -313,7 +308,7 @@ strong {
 }
 
 .contact-button:hover {
-  background-color: #cc5500;
+  background-color: #E0C097;
 }
 
 .error-message {
@@ -421,6 +416,10 @@ strong {
   background: #f1f1f1;
   border-radius: 10px;
 }
+.contact-form button{
+  background-color: #1C1C1C;
+
+}
 
 .contact-form h2 {
   color: #333;
@@ -450,9 +449,14 @@ strong {
   cursor: pointer;
   margin-top: 10px;
 }
-
+.contact-form form textarea{
+  background-color: white;
+}
+.contact-form form textarea {
+  color: black;
+}
 .send-btn:hover {
-  background: #45a049;
+  background-color: #E0C097;
 }
 
 /* Social Media */
