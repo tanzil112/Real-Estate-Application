@@ -1,30 +1,31 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 // Sample property data
 const properties = [
   // Hyderabad Properties
-  { id: 1, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "./apart2.jpg" },
-  { id: 2, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹1,00,000+", image: "./apart3.jpg" },
-  { id: 3, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "./apart4.jpg" },
-  { id: 4, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "./public/flat4.jpg" },
-  { id: 5, location: "Hyderabad", area: "Madhapur", type: "villa",  range: "₹10,000 - ₹50,000", image: "./flat4.jpg" },
+  { id: 1, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/apart2.jpg" },
+  { id: 2, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹1,00,000+", image: "/apart3.jpg" },
+  { id: 3, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/apart4.jpg" },
+  { id: 4, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/flat4.jpg" },
+  { id: 5, location: "Hyderabad", area: "Madhapur", type: "villa",  range: "₹10,000 - ₹50,000", image: "/flat4.jpg" },
 
   // Delhi Properties
-  { id: 6, location: "Delhi", area: "Dwarka", type: "Apartment", range: "₹10,000 - ₹50,000", image: "./apart5.jpg" },
-  { id: 7, location: "Delhi", area: "Saket", type: "House", range: "₹10,000 - ₹50,000", image: "./pent1.jpg" },
-  { id: 8, location: "Delhi", area: "Karol Bagh", type: "Villa", range: "₹100,000+", image: "./villa3.jpeg" },
-  { id: 9, location: "Delhi", area: "Connaught Place", type: "Penthouse", range: "₹3,00,000+", image: "./pent4.jpg" },
-  { id: 10, location: "Delhi", area: "Vasant Kunj", type: "Apartment", range: "₹50,000 - ₹1,00,000", image: "./apart6.jpg" },
+  { id: 6, location: "Delhi", area: "Dwarka", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/apart5.jpg" },
+  { id: 7, location: "Delhi", area: "Saket", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/apart2.jpg" },
+  { id: 8, location: "Delhi", area: "Karol Bagh", type: "Villa", range: "₹100,000+", image: "/villa3.jpeg" },
+  { id: 9, location: "Delhi", area: "Connaught Place", type: "Penthouse", range: "₹3,00,000+", image: "/pent4.jpg" },
+  { id: 10, location: "Delhi", area: "Vasant Kunj", type: "Apartment", range: "₹50,000 - ₹1,00,000", image: "/apart6.jpg" },
 
   // Bangalore Properties
-  { id: 11, location: "Bangalore", area: "Whitefield", type: "Apartment", range: "₹10,000 - ₹50,000", image: "./flat5.jpg" },
-  { id: 12, location: "Bangalore", area: "Whitefield", type: "Apartment", range: "₹10,000 - ₹50,000", image: "./flat6.jpg" },
-  { id: 13, location: "Bangalore", area: "Koramangala", type: "House", range: "₹50,000 - ₹1,00,000", image: "./apart5.jpg" },
-  { id: 14, location: "Bangalore", area: "Electronic City", type: "Villa", range: "₹1,00,000+", image: "./pent4.jpg" },
+  { id: 11, location: "Bangalore", area: "Whitefield", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/flat5.jpg" },
+  { id: 12, location: "Bangalore", area: "Whitefield", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/flat6.jpg" },
+  { id: 13, location: "Bangalore", area: "Koramangala", type: "House", range: "₹50,000 - ₹1,00,000", image: "/apart5.jpg" },
+  { id: 14, location: "Bangalore", area: "Electronic City", type: "Villa", range: "₹1,00,000+", image: "/pent4.jpg" },
   { id: 15, location: "Bangalore", area: "Indiranagar", type: "Penthouse", range: "₹1,00,000+", image: "/pent3.jpg" },
-  { id: 16, location: "Bangalore", area: "MG Road", type: "Studio Apartment", range: "₹10,000 - ₹50,000", image: "./apart7.jpg" }
+  { id: 16, location: "Bangalore", area: "MG Road", type: "Studio Apartment", range: "₹10,000 - ₹50,000", image: "/apart7.jpg" }
 ];
 
 export { properties };
@@ -116,6 +117,8 @@ const LocationSearch = () => {
   };
 
   return (
+    <>
+    <Navbar hideAuthLinks={true} hideAuthLinks2={true}/>
     <div className="search-container">
       <h2>Find Your Property</h2>
       <div className="search-filters">
@@ -148,7 +151,8 @@ const LocationSearch = () => {
           onChange={setSelectedRange}
           className="range-dropdown"
         />
-        <button onClick={handleSearch}>Search</button>
+        <div className="prop-btn"><button onClick={handleSearch}>Search</button>
+        </div>
       </div>
 
       <div className="results-container">
@@ -170,6 +174,7 @@ const LocationSearch = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

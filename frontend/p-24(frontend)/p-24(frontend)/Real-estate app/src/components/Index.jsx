@@ -9,6 +9,7 @@ import UserDashboard from './UserDashboard';
 import LocationSearch from './LocationSearch';
 import SearchResults from './SearchResults';
 import PropertyDetails from './PropertyDetails';
+import ContOwn from './ContOwn';
 
 function Index() {
   return (
@@ -21,6 +22,7 @@ function Index() {
           <Route path="/terms" element={<TandC />} />
           <Route path="/about" element={<About />} />
           
+          <Route path="/owner" element={<ContOwn />} />
          
           <Route path="/userdashboard" element={<UserDashboard />} />
           <Route path="/property/:id" element={<PropertyDetails />} />

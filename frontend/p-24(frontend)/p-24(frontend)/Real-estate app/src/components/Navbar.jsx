@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css"; // Import the CSS file
 
-const Navbar = ({ hideAuthLinks }) => {
+const Navbar = ({ hideAuthLinks, hideAuthLinks2 }) => {
   return (
     <nav className="navbar">
       <div className="logo-container">
@@ -27,6 +27,7 @@ const Navbar = ({ hideAuthLinks }) => {
           </Link>
         </div>
       )}
+      
     </nav>
   );
 };

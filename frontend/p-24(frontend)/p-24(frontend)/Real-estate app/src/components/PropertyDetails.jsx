@@ -1,16 +1,24 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Route, useNavigate, useParams } from "react-router-dom";
 import { properties } from "./LocationSearch"; // Importing properties
+import Navbar from "./Navbar";
 
 const PropertyDetails = () => {
   const { id } = useParams(); // Get property ID from URL
+  const navigate=useNavigate();
   const property = properties.find((p) => p.id === Number(id));
+  const ownerfun = () => {
+    navigate("/owner"); 
+  };
 
   if (!property) {
     return <h2 className="error-message">Property not found!</h2>;
   }
 
+  
   return (
+    <>
+    <Navbar/>
     <div className="property-details-container">
       <h1>{property.type} in {property.area}</h1>
       <div className="property-content">
@@ -25,21 +33,40 @@ const PropertyDetails = () => {
           <p><strong>Furnishing:</strong> {property.furnishing || "Semi-Furnished"}</p>
           <p><strong>Size:</strong> {property.size || "1200 sqft"}</p>
           <p><strong>Amenities:</strong> {property.amenities ? property.amenities.join(", ") : "Gym, Parking, Security"}</p>
-          <button className="contact-button">Contact Owner</button>
+          <button className="contact-button" onClick={ownerfun}>Contact Owner</button>
         </div>
       </div>
       <div className="amenities-section">
         <h2>Amenities</h2>
         <div className="amenities-list">
-          <div className="amenity"><div /> <i class="fa-solid fa-dumbbell"></i>Gym</div>
-          <div className="amenity"><div/><i class="fa-solid fa-person-swimming"></i> Swimming Pool</div>
-          <div className="amenity"><div /> <i class="fa-solid fa-elevator"></i>Lift</div>
-          <div className="amenity"><div /> <i class="fa-solid fa-car"></i>Parking</div>
-          <div className="amenity"><div/> <i class="fa-solid fa-shield-halved"></i>Security</div>
-          <div className="amenity"><div /><i class="fa-solid fa-wifi"></i> WiFi</div>
+          <div className="amenity"><i className="fa-solid fa-dumbbell"></i> Gym</div>
+          <div className="amenity"><i className="fa-solid fa-person-swimming"></i> Swimming Pool</div>
+          <div className="amenity"><i className="fa-solid fa-elevator"></i> Lift</div>
+          <div className="amenity"><i className="fa-solid fa-car"></i> Parking</div>
+          <div className="amenity"><i className="fa-solid fa-shield-halved"></i> Security</div>
+          <div className="amenity"><i className="fa-solid fa-wifi"></i> WiFi</div>
         </div>
       </div>
+      <div className="property-description">
+        <h2>Description</h2>
+        <p>
+          Looking for a one-bedroom on rent? This spacious one-bedroom flat for rent in Madhapur for 18,000 is ideal for bachelors. This 405 sqft. home is on the 3rd floor & comes with ample space for bike parking.
+        </p>
+        <p>
+          With amenities such as security, this home offers you a lot of convenience. Access to bus stop & pharmacies is very easy & convenient from this house.
+        </p>
+        <p>
+          If you are a frequent traveler, then you'll be happy to note that the train station is less than 10 minutes from this house.
+        </p>
+        <p>
+          With Meridian School, Manthan International School, and Orchids The International School close to this home, you'll be able to provide your children with many options to choose from. Being situated near Image Hospitals, Ankura Hospital for women & children, and Spintas Health Care, emergency care is very easily available at any time.
+        </p>
+        <p>
+          If you are looking for gifts, or just want to spoil yourself, HappinessSale, Best Fashion, and Kapidhwaja Castle Main Branch have a wide variety of things that you can choose from. With BR Hitech Theatre, Cilk Cini Craft, & Director Purijagannadh's Office Cave close by, you can catch your favorite movies running & never worry about missing a show because of traffic.
+        </p>
+      </div>
     </div>
+    </>
   );
 };
 
