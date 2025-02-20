@@ -1,0 +1,42 @@
+.navbar {
+    font-size: 20px;
+    background-color: #1C1C1C;
+    color: #F7F4F2;
+    padding: 15px 30px; /* Adjust padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100px; /* Set a fixed height */
+    overflow: hidden; /* Prevents navbar from resizing */
+}
+
+/* Navbar Links */
+.navbar a {
+    color: #E0C097; /* Gold */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-links {
+    display: flex;
+    gap: 20px; /* Adjusts spacing between links */
+    flex-grow: 1; /* Makes it occupy available space */
+    justify-content: center; /* Centers links horizontally */
+  }
+  
+.navbar a:hover {
+    color: #B98B8F; /* Muted Rose */
+}
+
+/* Navbar Logo */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    color: #C08497; /* Muted Pink */
+}

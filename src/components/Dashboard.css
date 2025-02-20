@@ -1,0 +1,151 @@
+/* Dashboard container styles */
+.dashboard-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    font-size: 20px;
+    background-color: #1C1C1C;
+    color: #F7F4F2;
+    padding: 10px 20px; /* Adjust padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100px; /* Set a fixed height */
+    overflow: hidden; /* Prevents navbar from resizing */
+}
+
+/* Navbar Links */
+.navbar a {
+    color: #E0C097; /* Gold */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #B98B8F; /* Muted Rose */
+}
+
+/* Navbar Logo */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    color: #C08497; /* Muted Pink */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+  
+  .logo-container {
+    flex-shrink: 0;
+  }
+  
+  .logo-img {
+    width: 150px; /* Increased size */
+    height: 190px;
+    border-radius: 30%;
+    object-fit: cover;
+    display: block;
+}
+
+  
+  
+  .nav-links {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #fbbf24; /* Hover effect - yellow */
+  }
+  
+  .auth-links {
+    display: flex;
+    gap: 16px;
+  }
+  
+  /* Button styles for login and sign up */
+  .auth-btn {
+    font-size: small;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .auth-btn:hover {
+    background-color: white;
+    color: #B98B8F; 
+  }
+  
+  /* Hero Section Styles */
+  .hero-section {
+    
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px; /* To offset the fixed navbar */
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ec4899; /* Pink color */
+    margin-bottom: 20px;
+  }
+  
+  /* Auth Card Styles (Login / SignUp) */
+  .auth-card {
+    background-color: rgba(255, 255, 255, 0.9); /* White with some transparency */
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #34d399; /* Light green */
+    margin-bottom: 20px;
+  }
+  
+  
