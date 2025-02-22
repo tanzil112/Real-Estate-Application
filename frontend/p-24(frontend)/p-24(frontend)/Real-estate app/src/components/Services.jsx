@@ -20,7 +20,7 @@ function Services () {
             <div><p id="neww">Interior Design</p></div>
             <div><p id="neww">Home Loan</p></div>
             <div><p id="neww">Insurance</p></div>
-            <div><p id="neww">Painting</p></div>
+            <div><p id="neww">Painting hello</p></div>
           </div>
 
         </div>
