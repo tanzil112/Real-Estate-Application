@@ -6,6 +6,8 @@ import Dashboard from './Dashboard';
 import TandC from './TandC';
 import About from './Aboutus';
 import UserDashboard from './UserDashboard';
+import SellerDashboard from './SellerDashboard';
+import SellerPropertyList from './SellerpropertyList';
 import LocationSearch from './LocationSearch';
 import SearchResults from './SearchResults';
 import PropertyDetails from './PropertyDetails';
@@ -31,6 +33,8 @@ function Index() {
           <Route path="/payment" element={<Payment />} />
 
           <Route path="/userdashboard" element={<UserDashboard />} />
+          <Route path="/sellerdashboard" element={<SellerDashboard />} />
+          <Route path="/sellerpropertylist" element={<SellerPropertyList />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
           helllllll
 

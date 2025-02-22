@@ -1,0 +1,87 @@
+export const Sellerpropertydata = [
+    { 
+      id: 1, 
+      address: "Madhapur, Hyderabad", 
+      type: "Apartment", 
+      range: "₹10,000 - ₹50,000", 
+      sellerName: "John Doe", 
+      sellerEmail: "john@example.com", 
+      sellerPhoneNumber: "9876XXXX", 
+      size: "1200 sqft", 
+      location: "Near Metro", 
+      description: "Spacious apartment with great view", 
+      furnished: true,
+      image: "/images/apartment1.jpg"
+    },
+    { 
+      id: 2, 
+      address: "Hitech City, Hyderabad", 
+      type: "Villa", 
+      range: "₹100,000+", 
+      sellerName: "Sophia Williams", 
+      sellerEmail: "sophia@example.com", 
+      sellerPhoneNumber: "9876XXXX", 
+      size: "2600 sqft", 
+      location: "Close to IT Hub", 
+      description: "Luxury villa with garden", 
+      furnished: false,
+      image: "/images/villa1.jpg"
+    },
+    { 
+      id: 3, 
+      address: "Connaught Place, Delhi", 
+      type: "Apartment", 
+      range: "₹50,000 - ₹100,000", 
+      sellerName: "Rohan Khanna", 
+      sellerEmail: "rohan@example.com", 
+      sellerPhoneNumber: "9856XXXX", 
+      size: "1500 sqft", 
+      location: "Near Rajiv Chowk Metro", 
+      description: "Modern apartment in central Delhi", 
+      furnished: true,
+      image: "/images/apartment2.jpg"
+    },
+    { 
+      id: 4, 
+      address: "Dwarka, Delhi", 
+      type: "House", 
+      range: "₹30,000 - ₹70,000", 
+      sellerName: "Priya Sharma", 
+      sellerEmail: "priya@example.com", 
+      sellerPhoneNumber: "9845XXXX", 
+      size: "1800 sqft", 
+      location: "Near Dwarka Sec-10 Metro", 
+      description: "Spacious independent house", 
+      furnished: false,
+      image: "/images/house1.jpg"
+    },
+    { 
+      id: 5, 
+      address: "Koramangala, Bangalore", 
+      type: "Villa", 
+      range: "₹150,000+", 
+      sellerName: "Amit Patel", 
+      sellerEmail: "amit@example.com", 
+      sellerPhoneNumber: "9834XXXX", 
+      size: "3000 sqft", 
+      location: "Close to IT Parks & Malls", 
+      description: "Luxurious villa with private pool", 
+      furnished: true,
+      image: "/images/villa2.jpg"
+    },
+    { 
+      id: 6, 
+      address: "Whitefield, Bangalore", 
+      type: "Apartment", 
+      range: "₹20,000 - ₹60,000", 
+      sellerName: "Neha Verma", 
+      sellerEmail: "neha@example.com", 
+      sellerPhoneNumber: "9823XXXX", 
+      size: "1400 sqft", 
+      location: "Near ITPL Tech Park", 
+      description: "Well-furnished apartment in a gated community", 
+      furnished: true,
+      image: "/images/apartment3.jpg"
+    }
+];
+
