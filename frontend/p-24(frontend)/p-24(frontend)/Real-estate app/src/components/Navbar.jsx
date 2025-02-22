@@ -6,16 +6,21 @@ const Navbar = ({ hideAuthLinks, hideAuthLinks2 }) => {
   return (
     <nav className="navbar">
       <div className="logo-container">
-        <img src="/img1.jpg" alt="Logo" className="logo-img" />
+        <Link to="/">
+          <img src="/img1.jpg" alt="Logo" className="logo-img" />
+        </Link>
       </div>
-      <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/">Services</Link>
-        <Link to="/">Payment</Link>
-        <Link to="/location-search">Location</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/about">About</Link>
-      </div>
+      {/* Hide nav links if hideAuthLinks2 is true */}
+      {!hideAuthLinks2 && (
+        <div className="nav-links">
+          <Link to="/userdashboard">Home</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/payment">Payment</Link>
+          <Link to="/location-search">Location</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/about">About Us</Link>
+        </div>
+      )}
       {/* Hide auth buttons if hideAuthLinks is true */}
       {!hideAuthLinks && (
         <div className="auth-links">
@@ -27,7 +32,6 @@ const Navbar = ({ hideAuthLinks, hideAuthLinks2 }) => {
           </Link>
         </div>
       )}
-      
     </nav>
   );
 };

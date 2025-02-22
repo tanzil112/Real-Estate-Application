@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 function Contact () {
   return (
     <>
-    <Navbar/>
+    <Navbar hideAuthLinks={true}/>
     <div className="main-contact">
     <div class="contact-container">
     <h1 class="contact-header">Contact Us</h1>

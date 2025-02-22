@@ -125,7 +125,7 @@ padding: 0px;
 }
 #footer{
     height: 200px;
-    width: 100%;
+    width: 100vw;
     color: rgb(0, 0, 0);
     background-color: #E0C097;
     padding: 20px;

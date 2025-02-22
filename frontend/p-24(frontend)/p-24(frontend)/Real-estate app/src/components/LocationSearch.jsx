@@ -12,8 +12,8 @@ const properties = [
   { id: 2, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹100,000+", image: "/apart5.jpg" },
   { id: 2, location: "Hyderabad", area: "Hitech City", type: "Villa", range: "₹100,000+", image: "/apart6.jpg" },
 
-  { id: 3, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/apart4.jpg" },
-  { id: 4, location: "Hyderabad", area: "Madhapur", type: "Apartment", range: "₹10,000 - ₹50,000", image: "/flat4.jpg" },
+  { id: 3, location: "Hyderabad", area: "Madhapur", type: "House", range: "₹10,000 - ₹50,000", image: "/apart4.jpg" },
+  { id: 4, location: "Hyderabad", area: "Madhapur", type: "House", range: "₹10,000 - ₹50,000", image: "/flat4.jpg" },
   { id: 5, location: "Hyderabad", area: "Madhapur", type: "villa",  range: "₹10,000 - ₹50,000", image: "/flat4.jpg" },
 
   // Delhi Properties
@@ -128,7 +128,7 @@ const LocationSearch = () => {
 
   return (
     <>
-    <Navbar hideAuthLinks={true} hideAuthLinks2={true}/>
+    <Navbar hideAuthLinks={true} />
     
     <div className="search-container">
       

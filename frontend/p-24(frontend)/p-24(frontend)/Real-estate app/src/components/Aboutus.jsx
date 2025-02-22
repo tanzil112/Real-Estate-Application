@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 function About() {
   return (
     <>
-    <Navbar/>
+    <Navbar hideAuthLinks={true}/>
       <div className='about'>
         <p id='abtpara'>About HomeHive</p>
         <div className="content">

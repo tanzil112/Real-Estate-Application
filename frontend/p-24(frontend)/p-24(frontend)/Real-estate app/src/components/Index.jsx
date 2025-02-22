@@ -11,6 +11,8 @@ import SearchResults from './SearchResults';
 import PropertyDetails from './PropertyDetails';
 import ContOwn from './ContOwn';
 import Contact from './Contact';
+import Services from './Services';
+import Payment from './Payment';
 
 function Index() {
   return (
@@ -25,9 +27,12 @@ function Index() {
           
           <Route path="/owner" element={<ContOwn />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/payment" element={<Payment />} />
 
           <Route path="/userdashboard" element={<UserDashboard />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
+          helllllll
 
 
           {/* Location Search Feature */}

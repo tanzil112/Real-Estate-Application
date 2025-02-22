@@ -2,7 +2,7 @@
 .search-filters {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  margin:40px 0px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -116,12 +116,12 @@
 
 /* Container for the search section */
 .search-container {
-  width: 90%;
-  margin: 150px auto;
+  width: 100%;
+  height: 160vh;
+  /* margin: 150px auto; */
   padding: 20px;
-  background: none;
+  background-color: #141414;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .search-container h2{
   text-align: center;
@@ -321,8 +321,7 @@ strong {
   margin-top: 20px;
   padding: 15px;
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: justify;
 }
 
 .property-description h2 {
@@ -368,13 +367,13 @@ strong {
 }
 
 .owner-details {
-  text-align: left;
+text-align: center;
+padding: 0px 10px;  
+width: 30%;
+color: black;
 }
 
-.owner-details h2 {
-  color: #4CAF50;
-  margin: 5px 0;
-}
+
 
 .owner-details p {
   margin: 5px 0;
@@ -382,7 +381,6 @@ strong {
 }
 
 .owner-details a {
-  color: #007BFF;
   text-decoration: none;
   font-weight: bold;
 }
@@ -489,4 +487,46 @@ strong {
 
 .back-home:hover {
   text-decoration: underline;
+}
+.services-main{
+  height: 150vh;
+  width: 100%;
+  background-color: #141414;
+  color: white;
+  margin: 100px 0px;
+}
+#ser{
+  font-size: 40px;
+  font-family:poppins;
+  font-style: italic;
+  text-align: left;
+  padding-top: 50px;
+  padding-left: 20px;
+  position: relative;
+}
+.ser-div{
+  height: 100vh;
+  width: 95%;
+  /* background-color: #4CAF50; */
+  margin: 0px 50px;
+}
+.ser-card{
+  font-size: 40px;
+  display: flex;
+ gap: 50px;
+justify-content: center;
+padding-top: 70px;
+justify-content: space-around;
+}
+
+.ser-description {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 40px;
+  gap: 190px;
+}
+#neww{
+  color: white;
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

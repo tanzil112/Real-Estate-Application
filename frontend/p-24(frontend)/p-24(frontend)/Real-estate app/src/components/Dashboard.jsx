@@ -8,7 +8,7 @@ function Dashboard() {
     <>
       <div className="dashboard-container">
         {/* Navbar */}
-      <Navbar />
+      <Navbar hideAuthLinks2={true}/>
         {/* Hero Section */}
         <div className="hero-section">
           
