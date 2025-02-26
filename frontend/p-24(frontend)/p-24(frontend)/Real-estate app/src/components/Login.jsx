@@ -62,7 +62,7 @@ function Login() {
         if (role === 'admin') {
           navigate('/admin-dashboard');
         } else if (role === 'seller') {
-          navigate('/seller-dashboard');
+          navigate('/sellerdashboard');
         } else {
           navigate('/userdashboard');
         }

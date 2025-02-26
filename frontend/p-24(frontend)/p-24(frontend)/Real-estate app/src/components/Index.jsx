@@ -34,6 +34,8 @@ function Index() {
 
           <Route path="/userdashboard" element={<UserDashboard />} />
           <Route path="/sellerdashboard" element={<SellerDashboard />} />
+
+          <Route path="/sellerdashboard" element={<SellerDashboard />} />
           <Route path="/sellerpropertylist" element={<SellerPropertyList />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
           helllllll

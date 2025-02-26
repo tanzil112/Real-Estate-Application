@@ -30,8 +30,8 @@ const ServicesComponent = () => {
         <h2>Book an Appointment or Make an Inquiry</h2>
         <p>Have questions or want to schedule a service? Fill out the form below and our team will get back to you.</p>
         <form className="appointment-form">
-          <label htmlFor="name">Full Name:</label>
-          <input type="text" id="name" name="name" required />
+        <label className="label-left" htmlFor="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
 
           <label htmlFor="email">Email Address:</label>
           <input type="email" id="email" name="email" required />
