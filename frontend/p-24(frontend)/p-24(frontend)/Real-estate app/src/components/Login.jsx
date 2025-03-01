@@ -60,7 +60,7 @@ function Login() {
       setMessage(response.data);
       if (response.data === 'Login successful!') {
         if (role === 'admin') {
-          navigate('/admin-dashboard');
+          navigate('/admindashboard');
         } else if (role === 'seller') {
           navigate('/sellerdashboard');
         } else {

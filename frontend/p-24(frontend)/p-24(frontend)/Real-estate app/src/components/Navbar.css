@@ -2,7 +2,7 @@
     font-size: 20px;
     background-color: #1C1C1C;
     color: #F7F4F2;
-    padding: 15px 30px; /* Adjust padding */
+    padding: 15px 30px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,8 +11,8 @@
     top: 0;
     left: 0;
     z-index: 10;
-    height: 100px; /* Set a fixed height */
-    overflow: hidden; /* Prevents navbar from resizing */
+    height: 100px; 
+    overflow: hidden; 
 }
 
 /* Navbar Links */
@@ -24,19 +24,21 @@
 }
 .nav-links {
     display: flex;
-    gap: 20px; /* Adjusts spacing between links */
+    gap: 150px; 
     flex-grow: 1; /* Makes it occupy available space */
-    justify-content: center; /* Centers links horizontally */
+    justify-content: center;
   }
   
 .navbar a:hover {
     color: #B98B8F; /* Muted Rose */
+}
+.navbar a{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
 /* Navbar Logo */
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
-    font-family: 'Playfair Display', serif;
     color: #C08497; /* Muted Pink */
 }

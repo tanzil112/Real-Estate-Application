@@ -15,6 +15,7 @@ import ContOwn from './ContOwn';
 import Contact from './Contact';
 import Services from './Services';
 import Payment from './Payment';
+import AdminDashboard from './AdminDashboard';
 
 function Index() {
   return (
@@ -34,7 +35,7 @@ function Index() {
 
           <Route path="/userdashboard" element={<UserDashboard />} />
           <Route path="/sellerdashboard" element={<SellerDashboard />} />
-
+          <Route path="/admindashboard" element={<AdminDashboard />} />
           <Route path="/sellerdashboard" element={<SellerDashboard />} />
           <Route path="/sellerpropertylist" element={<SellerPropertyList />} />
           <Route path="/property/:id" element={<PropertyDetails />} />

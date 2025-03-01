@@ -13,7 +13,7 @@ const services = [
 const ServicesComponent = () => {
   return (
     <>
-    <Navbar />
+    <Navbar hideAuthLinks={true}/>
     <div className="services-main">
       <h1 className="services-title">Our Comprehensive Real Estate Services</h1>
       <div className="services-container">
